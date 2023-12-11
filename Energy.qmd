@@ -59,6 +59,7 @@ df2 = df_left.merge(
 
 ```{python}
 #| title: 에너지사용량 자료 
+!pip install itables
 import itables 
 itables.show(df2,showIndex=False)
 ```
