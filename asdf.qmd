@@ -54,8 +54,8 @@ fig1 = px.density_heatmap(
     z = '평균속력',
     nbinsx = 24,
     nbinsy = 7,
-    width = 1200,
-    height = 250
+    width = 1500,
+    height = 220
 )
 
 fig2 = px.density_heatmap(
@@ -65,8 +65,8 @@ fig2 = px.density_heatmap(
     z = '평균이동거리',
     nbinsx = 24,
     nbinsy = 7,
-    width = 1200,
-    height = 250
+    width = 1500,
+    height = 220
 )
 ```
 
