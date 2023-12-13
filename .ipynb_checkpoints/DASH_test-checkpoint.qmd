@@ -128,5 +128,5 @@ fig2.show()
 
 ```{python}
 #| title: 속력별 경로 시각화
-#fig3.show()
+fig3.show()
 ```
