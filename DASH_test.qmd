@@ -35,10 +35,11 @@ df_small = df[::100].reset_index(drop=True)
 
 
 df_featured = df[['pickup_datetime']].assign(avg_speed = df.dist / df.trip_duration)\
-.assign(dow = lambda _df : _df.pickup_datetime.dt.dayofweek.map({0:'월',1:'화',2:'수',3:'목',4:'금',5:'토',6:'일'}))\
+.assign(dow = lambda _df : _df.pickup_datetime.dt.dayofweek)\
 .assign(pickup_hour = lambda _df : _df.pickup_datetime.dt.hour).drop('pickup_datetime', axis = 1)\
 .pivot_table(index = 'pickup_hour', columns = 'dow', values = 'avg_speed', aggfunc = 'mean').stack().reset_index()\
-.rename({'dow' : '요일', 'pickup_hour' : 'pickup 시간', 0 : '평균속력'}, axis = 1)
+.rename({'dow' : '요일', 'pickup_hour' : 'pickup 시간', 0 : '평균속력'}, axis = 1)\
+.assign(요일 = lambda _df : _df.요일.map({0:'월',1:'화',2:'수',3:'목',4:'금',5:'토',6:'일'}))
 
 df_featured2 = df[['pickup_datetime']].assign(avg_dist = df.dist)\
 .assign(dow = lambda _df : _df.pickup_datetime.dt.dayofweek)\
@@ -63,11 +64,13 @@ fig1 = px.density_heatmap(
     z = '평균속력',
     nbinsx = 24,
     nbinsy = 7,
-    width = 1500,
-    height = 220
 )
 
+<<<<<<< HEAD:DASH_test.qmd
 fig1.update_layout(coloraxis_colorbar={'title':'평균속력'})
+=======
+fig1.update_layout(coloraxis_colorbar=dict(title='평균속력'))
+>>>>>>> 72e7b889ab0e95686c1998c236452f7b0ed42946:asdf.qmd
 
 fig2 = px.density_heatmap(
     data_frame = df_featured2,
@@ -76,10 +79,9 @@ fig2 = px.density_heatmap(
     z = '평균이동거리',
     nbinsx = 24,
     nbinsy = 7,
-    width = 1500,
-    height = 220
 )
 
+<<<<<<< HEAD:DASH_test.qmd
 fig2.update_layout(coloraxis_colorbar={'title':'평균이동거리'})
 
 fig3 = px.line_mapbox(
@@ -113,6 +115,9 @@ fig3.data[-1].update(name = '매우빠름 (pickup/dropoff)')
 fig3.data[-2].update(name = '조금빠름 (pickup/dropoff)')
 fig3.data[-3].update(name = '조금느림 (pickup/dropoff)')
 fig3.data[-4].update(name = '매우느림 (pickup/dropoff)')
+=======
+fig2.update_layout(coloraxis_colorbar=dict(title='평균이동거리'))
+>>>>>>> 72e7b889ab0e95686c1998c236452f7b0ed42946:asdf.qmd
 ```
 
 # 기말고사1-(1),(2)
