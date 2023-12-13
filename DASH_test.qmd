@@ -85,6 +85,7 @@ fig3 = px.line_mapbox(
     lon = 'longitude',
     color = '평균속력',
     line_group = 'id',
+    center = {'lat' : 40.7322, 'lon' : -73.9052},
     #---#
     mapbox_style = 'carto-positron',
     zoom = 11
