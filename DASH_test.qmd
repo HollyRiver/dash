@@ -1,6 +1,6 @@
 ---
-title: "NYCTaxi"
-author: "강신성(2020-14107)"
+title: "기말고사 연습용"
+author: "강신성(test version)"
 format: dashboard
 execute: 
   enabled: true
@@ -103,8 +103,7 @@ points = px.scatter_mapbox(
     zoom = 11
 ).data
 
-for p in points :
-    fig3.add_trace(p)
+fig3.add_traces(p)
 
 fig3.update_traces(line = {'width' : 1})
 fig3.data[-1].update(name = '매우빠름 (pickup/dropoff)')

@@ -1,0 +1,35 @@
+---
+title: "NYCTaxi"
+author: "강신성(2020-14107)"
+format: dashboard
+execute: 
+  enabled: true
+  cache: false
+  freeze: false
+---
+
+
+
+```{python}
+#|output = false
+# 코드 몰아넣는 부분
+```
+
+# 기말고사1-(1),(2)
+
+```{python}
+#| title: 
+fig1.show()
+```
+
+```{python}
+#| title: 
+fig2.show()
+```
+
+# 기말고사1-(3)
+
+```{python}
+#| title: 
+fig3.show()
+```
