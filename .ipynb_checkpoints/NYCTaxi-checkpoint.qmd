@@ -11,25 +11,25 @@ execute:
 
 
 ```{python}
-#|output = false
+#|output: false
 # 코드 몰아넣는 부분
 ```
 
 # 기말고사1-(1),(2)
 
 ```{python}
-#| title: 
-fig1.show()
+#| title: 1번 문제 시각화 타이틀
+# fig1.show()
 ```
 
 ```{python}
-#| title: 
-fig2.show()
+#| title: 2번 문제 시각화 타이틀
+# fig2.show()
 ```
 
 # 기말고사1-(3)
 
 ```{python}
-#| title: 
-fig3.show()
+#| title: 3번 문제 시각화 타이틀
+# fig3.show()
 ```
